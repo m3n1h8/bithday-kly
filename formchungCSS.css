@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif; 
+    background-color: #FFF8E1;
+    overflow-x: hidden;
+    
+}
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* Phần đầu trang */
+header{
+    position: relative;
+
+   
+    height: 700px;
+    overflow: hidden;
+    border: solid 10px #412105;
+}
+
+    
+
+header img{
+    width: 100%;
+
+    
+}
+ header h1{
+    color: #FFFFFF;
+    position: absolute;
+    top: 37%;
+    left: 5%;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-shadow: #412105 4px 2px 4px ;
+ }
+ header p{
+    color: #FFFFFF;
+    position: absolute;
+    top: 76%;
+    left: 5%;
+    font-size: 25px;
+    text-shadow: #412105 4px 2px 4px ;
+ }
+ 
+ header button{
+    position: absolute;
+    top: 84%;
+    left: 5%;
+    padding: 10px 20px;
+    background: #D5850E;
+    color:#FFFFFF;
+    border: solid 1px #FFF8E1;
+    border-radius: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.5s;}
+    header button span{
+        position: relative;
+        top: 3px;
+        left: 3px;
+        
+    }
+    header button:hover{
+        background: #FFF8E1;
+        color: #412105; 
+        transform: scale(1.06) translateY(3px);
+        
+    }
+
+
+
+    /* tiêu đề */
+    .title{
+        text-align: center;
+        margin-top: 7%;
+        font-size: 35px;
+        font-weight: 600;
+        border: solid 1px #412105;
+       
+    }
+    .titlep{
+        text-align: center;
+        margin: 4px 0 20px 0;
+        font-size: 30px;
+        font-weight: 400;
+        color: rgb(94, 148, 13);
+    }
+
+.bodyinside{
+    
+    margin: 10px;
+}
+    /*phần intro*/
+    .intro{
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        gap: 12px;
+        width: 100%;
+        overflow: hidden;
+        
+         
+    }
+    .intro .item1{
+        width: 100%;
+        border-radius: 30px;
+        grid-column: span 2; 
+        box-shadow: 2px 2px 5px #4d290a;
+    } 
+    .intro .item1:hover{
+        transform: translateY(-4px);
+        transition: 0.3s;
+    }
+    
+    .intro .item2{
+        width: 100%;
+        border-radius: 30px;
+         box-shadow: 2px 2px 5px #4d290a;
+    }
+    .intro .item2:hover{
+        transform: translateY(-4px);
+        transition: 0.3s;
+    }
+    .intro .item3{
+        width: 100%;
+        border-radius: 30px;
+         box-shadow: 2px 2px 5px #4d290a;
+    }
+    .intro .item3:hover{
+        transform: translateY(-4px);
+        transition: 0.3s;
+    }
+
+ /* phần sở thích*/
+    #introinterst{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 4%;
+        text-shadow: #4d290a 5px 5px 17px 2px;
+        transition: 0.3s;
+        animation: introinterst 1s linear infinite ;
+    }
+    @keyframes introinterst{
+        0%{
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+        25%{
+            transform: translateY(-15px);
+            opacity: 1;
+        }
+        50%{
+            transform: translateY(-20px);
+            opacity: 1;
+        }
+        75%{
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 0;
+        }
+    }
+    .interest
+{
+    display: flex; 
+    flex-direction: column;
+}
+.interest .item{
+    width: 100%;
+    height: 300px;
+   border: solid 1px #b37d18;
+    border-radius: 20px;
+    margin: 7px 0 7px 0;
+    background:linear-gradient( 90deg,#cf800b,#cf800b,#FFA726, rgb(235, 217, 180) ) ;
+    color: #FFFFFF;
+    
+    
+    
+    display: flex;
+    justify-content: space-between;
+}
+.interest #item2{
+     background:linear-gradient( 90deg, rgb(235, 217, 180)  ,#FFA726,#cf800b,#cf800b ) ;
+}
+.interest .item img{
+    width: 30%;
+    
+    
+    border-radius: 20px;
+    margin: 3%;
+    background-color:#efede5 ;
+    box-shadow: 2px 2px 5px #4d290a;
+}
+.interest .item img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.interest .item p{
+  
+   flex-grow: 1fr;
+
+}
+#inneriteminterest{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+h2{
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 600;
+}
+#inneriteminterest p{
+    font-size: 20px;
+    margin: 10px;
+}
+/* phần đông hồ đếm ngược*/
+
+.introcountdown{
+        text-align: center;
+        margin-top: 90px;
+        font-size: 30px;
+        font-weight: 600;
+        text-shadow: #4d290a 5px 5px 17px 2px;
+        transition: 0.3s;
+        animation: introinterst 1s linear infinite ;}
+.countdown{
+
+    position: relative;
+    background-image: url("anh-banh-sinh-nhat-dep-5.jpg");
+     background-size: cover;
+    background-position: center;
+    height: 600px;
+    margin: 30px 0;
+    }
+
+    .overlay{
+        position: absolute;
+        inset: 0;
+        background-color: rgba(227, 206, 148, 0.4);
+        z-index: 1;
+    }
+    .content{
+        position: absolute;
+        top: 8%;
+        left: 10%;
+        z-index: 4;
+        border: solid 2px rgb(253, 244, 230) ;
+        border-radius: 5px;
+        height: 84%;
+        width: 80%;
+    }
+    .contentborder{
+        position: absolute;
+        top: 10%;
+        left: 8%;
+        z-index: 3;
+        border: solid 2px  rgb(253, 244, 230);
+        border-radius: 5px;
+        height: 80%;
+        width: 84%
+
+    }
+
+.content div{
+    position: absolute;
+    top: 20%;
+   
+    color: #efede5;
+    width: 50%;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #412105;
+}
+
+
+.time{
+    font-size: 50px;
+    position: absolute;
+    top: 2.38%;
+    right: 0;
+    background-color: #FFF8E1;
+    height: 95.24%;
+    width: 50%;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+@media ( max-width: 700px){
+    header{
+        height: 800px;
+    }
+    header h1{
+    color: #a53030;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 78px;
+    text-transform: uppercase;
+    text-shadow: #412105 4px 2px 4px ;
+ }
+}
