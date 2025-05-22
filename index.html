@@ -8,15 +8,25 @@
     <title>Trang chủ</title>
 </head>
 <body>
+    
     <div class="container">
+        <div class="layoutcontainer">
+            <div class="videobox">
+                <button onclick="hide()" class="btnhide">X</button>
+                <video  controls>
+                    <source src="lv_7401923482826591506_20250521205935.mp4" type="video/mp4">
+                                
+                </video>
+            </div>
+        </div>    
         <!--đầu trang-->
         <header>
-            <div><img src="cốc trà.jpg" class="headphoto" ></div>
+            <img src="cốc trà.jpg" class="headphoto" >
             <h1 data-aos="fade-up-right">Hôm nay <br>là  sinh nhật <br>Khánh Ly</h1>
             <p class="headp" data-aos="fade-up-left">chúc cậu sinh nhật vui vẻ
 
             </p>
-            <button>xem quà <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span></button>
+            <button onclick="scrolltogift()">xem quà <span><ion-icon name="arrow-forward-circle-outline"></ion-icon></span></button>
         
            
 
@@ -77,22 +87,28 @@
                      <div class="content">
                         
                         <div>SAVE this DATE</div>
-                        <span id="countdownhour" class="time" > 00
+                        <span class="time" >
+                            <img src="ngọn lửa tách nền.png"  id="fire1"  >
+                            <img src="ngọn lửa tách nền.png"  id="fire2" >
+                            <img src="ngọn lửa tách nền.png"  id="fire3" >
+                            <img src="ngọn lửa tách nền.png"  id="fire4" >
+                            <img src="ngọn lửa tách nền.png"  id="fire5" >
+                            <img src="ngọn lửa tách nền.png"  id="fire6" >
+                            <img src="ngọn lửa tách nền.png"  id="fire7" >    
+                            <img src="ảnh bánh sinh nhật ko nến tách nền.png" id="cake">
+                            <p id="notify">ấn vào bánh để thắp nến</p>
+                            <p id="reverseclock">đồng hồ đếm ngược</p>
+                            <p id="countdownhour"></p>
                         </span>
-                     </div>
-                    
-                   
-                       
+                     </div>   
+                           
                 </div>
 
 
-                <P>gửi khánh ly</P>
-                <div class="dearshe">
-                    
-                    <img src="ảnh xám.jpg" >
-                    <img src="ảnh xám.jpg" >
-                    <img src="ảnh xám.jpg" >
-
+                
+                <div class="giftbox">
+                    <P>gửi khánh ly lời chúc của tớ</P>
+                    <img src="ảnh hộp quà tách nền.png" class="gift" onclick="watchvideo()" data-aos="zoom-in-up" data-aos-duration="2000">
                 </div>
                 <p>bithcard</p>
                 <div class="bithcard">
@@ -110,10 +126,11 @@
                 </div>
             </div>
         </div>
-        <audio controls autoplay loop >
+        <audio controls autoplay muted loop >
         <source src="Happy Birthday to You (Always 14) - AMEE x Hoàng Dũng x Obito x Hứa Kim Tuyền  OFFICIAL LYRIC VIDEO.mp3" type="audio/mpeg">
         
         </audio>
+     
 
 
  <!--đuôi trang-->
@@ -141,7 +158,11 @@
     <!--tích hợp AOS cuộn trang-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-    AOS.init();
-</script>
+    AOS.init();</script>
+    
+</lottie-player>
 </body>
 </html>
+
+
+
