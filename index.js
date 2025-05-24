@@ -91,7 +91,7 @@ function watchvideo(){
     layoutcontainer.style.opacity="1";
     
    
-    setTimeout(()=>{video.play()}, 2000);
+    setTimeout(()=>{video.play()}, 1500);
     // phát video khi ấn vào khoang trống
     audio.pause();// tạm dừng nhạc khi bật video
     AOS.refresh(); 
@@ -117,3 +117,22 @@ function scrolltogift(){
         start: "block",
     });
 }
+
+//
+//bóng bay
+document.getElementById("cake").addEventListener("click", function () {
+      const container = document.getElementById("balloon-container");
+
+      for (let i = 0; i < 30; i++) {
+        const balloon = document.createElement("div");
+        balloon.className = "balloon";
+
+        balloon.style.left = `${Math.random() * 100}%`;
+
+        const colors = ["#ff4d4d", "#ff66cc", "#66ccff", "#ffff66", "#99ff99"];
+        balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+        container.appendChild(balloon);
+        setTimeout(() => balloon.remove(), 5000);
+      }
+    });

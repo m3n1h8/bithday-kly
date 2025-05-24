@@ -5,7 +5,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif; 
-    background-color: #FFF8E1;
+    background-color: #fffaea;
     overflow-x: hidden;
     
     
@@ -26,9 +26,9 @@ body{
     display: flex;
     justify-content: center;
     position: fixed;
-    height: 94%;
-    top: 3%;
-    width: 800px;
+    height: 90%;
+    top: 5%;
+    width: 910px;
     border-radius: 40px;
     background-color:#FFF8E1;
     box-shadow: 4px 4px 16px  #4a3119;
@@ -66,17 +66,17 @@ video{
 /* Phần đầu trang */
 header{
     position: relative;
-
     color:#efede5;
-    height: 980px;
+    height: 1200px;
     overflow-y: hidden;
-    border: solid 3px #412105;
+     overflow-x: hidden;
+    border-radius: 0 0 30px 30px;
 }
 
     
 
 header img{
-    width: 100%;
+    
     height: 100%;
     
 
@@ -105,9 +105,9 @@ header img{
     top: 84%;
     left: 5%;
     padding: 10px 50px;
-    background: #D5850E;
+    background: #5E940D;
     color:#FFFFFF;
-    border: solid 1px #FFF8E1;
+    border: solid 3px #FFF8E1;
     border-radius: 40px;
     font-size: 30px;
     text-transform: uppercase;
@@ -130,10 +130,10 @@ header img{
     /* tiêu đề */
     .title{
         text-align: center;
-        margin-top: 150px;
+        margin-top: 300px;
         font-size: 39px;
         font-weight: 600;
-        border: solid 1px #dccfc3;
+        
        
     }
     .titlep{
@@ -193,7 +193,7 @@ header img{
         text-align: center;
         font-size: 30px;
         font-weight: 600;
-        margin-top: 40px;
+        margin-top: 70px;
         margin-bottom: 4%;
         text-shadow: #4d290a 5px 5px 17px 2px;
         transition: 0.3s;
@@ -228,7 +228,7 @@ header img{
 }
 .interest .item{
     width: 100%;
-    height: 300px;
+    height: 350px;
    border: solid 1px #b37d18;
     border-radius: 20px;
     margin: 7px 0 7px 0;
@@ -438,11 +438,19 @@ h2{
 }
 #notify{
     position: absolute;
-    bottom: 100px;
-    width:100%;
+    left: 20%;
+    
+    bottom: 80px;
+    width:60%;
     text-align: center;
-    font-size: 15px;
-    border: solid 2px #412105;
+    font-size: 27px;
+    
+    font-family: 'Baloo 2', cursive;
+    padding: 6px;
+    border-radius: 25px;
+    color:#FFF8E1;
+    background-color:#ff6600;
+    
 
 }
 .timewish{
@@ -453,23 +461,23 @@ h2{
     font-size: 28px;
     font-family: 'Fredoka One', cursive;
     font-weight: 600;
-    border: solid 2px #412105;
+    
     color: #e49501;
 }
 #reverseclock{
     position: absolute;
-    bottom: 65px;
+    bottom: 57px;
     width:100%;
     text-align: center;
-    font-size: 15px;
-    border: solid 2px #412105;
+    font-size: 20px;
+    
     color: #e49501;
 
 }
 
 #countdownhour{
     font-size: 50px;
-    border: solid 2px #412105;
+   
     position: absolute;
     bottom: 0;
     width:100%;
@@ -479,8 +487,8 @@ h2{
 
 /*phần hộp quà*/
 .giftbox{
-    border: solid 1px #412105;
-    margin-top: 300px;
+    
+    margin-top: 280px;
 
 }
 .giftbox p{
@@ -493,6 +501,7 @@ h2{
 .giftbox .gift{
     width: 50%;
     margin-left: 25%;
+    margin-top: 30px;
     animation: gift 1s linear infinite;
 
     
@@ -515,6 +524,45 @@ h2{
     100%{
         transform: rotate(0deg);
     }
+}
+
+
+
+/*phần lời chúc của mọi người*/
+.loichucbox{
+   margin-top: 300px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.loichucintro{
+    font-size: 50px;
+    font-weight: 600;
+    color:#613f20;
+    margin-bottom: 50px;
+    
+}
+.loichuc{
+    
+    border-radius: 40px;
+    width: 80%;
+    background: #fcfaf4;
+    text-align: center;
+    padding: 30px 10px;
+    font-family:Dancing Script, cursive;
+    font-size: 50px;
+    box-shadow: 4px 4px 10px  #ae7b38;
+}
+
+.day{
+    width: 2px;
+    height: 100px;
+    background-color: #9d6636;
+}
+audio{
+    width: 300px;
 }
 
 
