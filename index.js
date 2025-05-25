@@ -7,8 +7,24 @@ const now = new Date();
 const nowhour= now.getHours();
 const nowminute= now.getMinutes();  
 const nowsecond= now.getSeconds();
+
+ let countdownhour= 23 - nowhour;
+ let countdownminute= 59 - nowminute;
+ let countdownsecond= 60 - nowsecond;
+ if(countdownhour < 10)
+    {
+        countdownhour = "0" + countdownhour;
+    }
  
- hour.innerHTML= (23 - nowhour)+": "+( 59 - nowminute)+": "+(60 - nowsecond)
+    if(countdownminute < 10)
+    {
+        countdownminute = "0" + countdownminute;
+    }
+    if(countdownsecond < 10)
+    {
+        countdownsecond = "0" + countdownsecond;
+    }
+    hour.innerHTML= countdownhour + ": " + countdownminute + ": " + countdownsecond;
 }, 1000);
 
 
@@ -80,33 +96,25 @@ cake.addEventListener("click", burnfire);
 
 
 //
-// chiếu video anh da đen và ẩn đi khi ấn vào khoang trống
+// chiếu video anh da đen 
 
  const layoutcontainer= document.querySelector(".layoutcontainer");
  const videobox= document.querySelector(".videobox");
  const video= document.querySelector("video");
- const audio= document.querySelector("audio");
+ const audio= document.querySelector("audio");//đoạn này sai r sửa sau
 function watchvideo(){
     layoutcontainer.style.display="flex";
     layoutcontainer.style.opacity="1";
     
    
     setTimeout(()=>{video.play()}, 1500);
-    // phát video khi ấn vào khoang trống
-    audio.pause();// tạm dừng nhạc khi bật video
+    
+    audio.pause();// sai rồi sửa sau
     AOS.refresh(); 
 }
 
 
 
-//
-// ẩn video 
-function hide(){
-   layoutcontainer.style.display="none";
-   
-    video.pause();// tạm dừng video khi ấn vào khoang trống
-    audio.play();// phát nhạc khi tắt video
-}
 
 
 //
@@ -136,3 +144,34 @@ document.getElementById("cake").addEventListener("click", function () {
         setTimeout(() => balloon.remove(), 5000);
       }
     });
+
+
+
+    //
+    // nổi phần lời chúc
+    const details = document.querySelector("detail");
+    const loichuc = document.querySelector(".loichuc");
+    const summary = document.querySelector("summary");
+    const loichucbox = document.querySelector(".loichucbox");
+    function showloichuckly(){
+         loichucbox.setAttribute("class","loichucshowing");
+            loichucbox.style.zIndex="109";
+ 
+         layoutcontainer.style.display="flex";
+         layoutcontainer.style.opacity="1";
+         videobox.style.display="none"; 
+         layoutcontainer.addEventListener("click",hide);
+    }
+    
+    summary.addEventListener("click",showloichuckly);
+    
+//
+// ẩn video 
+function hide(){
+    layoutcontainer.style.display="none";
+    videobox.style.display="flex"; 
+    layoutcontainer.removeEventListener("click",hide); 
+    loichucbox.style.zIndex="30";
+    video.pause();
+    audio.play();
+}
