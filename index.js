@@ -100,13 +100,14 @@ cake.addEventListener("click", burnfire);
 
 
 
+
 //
 //cuộn đến vị trí quà
 function scrolltogift(){
-    document.querySelector(".giftbox").scrollIntoView({
-        behavior: "smooth",
-        start: "block",
-    });
+   // document.querySelector(".giftbox").scrollIntoView({
+  //      behavior: "smooth",
+  //      start: "block",
+   // });
     backgroundmusic.play();
     backgroundmusicicon.name="volume-high-outline";
     backgroundmusicicon.onclick= offmusic
@@ -114,7 +115,9 @@ function scrolltogift(){
 
 //
 //bóng bay
-document.getElementById("cake").addEventListener("click", function () {
+document.getElementById("cake").addEventListener("click",baloon);
+notify.addEventListener("click",baloon);
+ function baloon () {
       const container = document.getElementById("balloon-container");
 
       for (let i = 0; i < 30; i++) {
@@ -129,8 +132,7 @@ document.getElementById("cake").addEventListener("click", function () {
         container.appendChild(balloon);
         setTimeout(() => balloon.remove(), 5000);
       }
-    });
-
+    }
 
 
     //
@@ -143,21 +145,23 @@ document.getElementById("cake").addEventListener("click", function () {
     const summary4 = document.querySelector(".summary4");
     const loichucbox = document.querySelector(".loichucbox");
     const manh = document.querySelector(".manh");
+
     function showloichuckly(){
          
          loichucbox.style.zIndex="109";
+
+        backgroundmusicicon.style.zIndex="70"
          loichucbox.setAttribute("class","loichucshowing");
             
          layoutcontainer.style.zIndex="99";
          layoutcontainer.style.display="flex";
-         layoutcontainer.style.opacity="1";
+      //   layoutcontainer.style.opacity="1";
          videobox.style.display="none"; 
          layoutcontainer.addEventListener("click",hide);
          backgroundmusic.pause();
-         manh.play();
+       //  manh.play();
 
     }
-    
     summary1.addEventListener("click",showloichuckly);
     summary2.addEventListener("click",showloichuckly);
     summary3.addEventListener("click",showloichuckly);
@@ -166,6 +170,7 @@ document.getElementById("cake").addEventListener("click", function () {
 // ẩn video 
 function hide(){
     layoutcontainer.style.display="none";
+    backgroundmusicicon.style.zIndex="110"
     
     layoutcontainer.removeEventListener("click",hide); 
     video.pause();
@@ -182,7 +187,7 @@ function hide(){
  const backgroundmusic= document.querySelector("#backgroundmusic");
 function watchvideo(){
     layoutcontainer.style.display="flex";
-    layoutcontainer.style.zIndex="110";
+    layoutcontainer.style.zIndex="111";
   
     videobox.style.display="flex"; 
    
@@ -204,10 +209,7 @@ function watchvideo(){
       }
     });
 
-    // Nếu muốn tự bật lại nhạc nền sau khi nghe xong:
-    // audio.addEventListener("ended", () => {
-    //   bgMusic.play();
-    // });
+   
   });
 
 

@@ -96,7 +96,7 @@ header img{
     position: absolute;
     top: 76%;
     left: 5%;
-    font-size: 25px;
+    font-size: 30px;
     text-shadow: #412105 4px 2px 4px ;
  }
  
@@ -120,6 +120,9 @@ header img{
         left: 3px;
         
     }
+    
+        
+    
     header button:hover{
         background: #FFF8E1;
         color: #412105; 
@@ -292,7 +295,7 @@ header img{
         margin-top: 190px;
         font-size: 30px;
         color:#613f20;
-        font-family: 'lobster', cursive;
+       /* font-family: 'lobster', cursive;*/
         font-weight: 600;
         text-shadow: #4d290a 5px 5px 17px 2px;
         transition: 0.3s;
@@ -345,11 +348,11 @@ header img{
    
     color: #efede5;
     width: 50%;
-    font-size: 90px;
+    font-size: 100px;
     font-family: 'Baloo 2', cursive;
     font-weight: 700;
     text-align: center;
-    text-shadow: 4px 3px 5px #412105;
+    text-shadow: 4px 4px 5px #412105;
 }
 
 
@@ -598,7 +601,7 @@ audio{
     z-index: 80;
     width: 100px;
     height: 100px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 50%;
     background-color:#5E9431 ;
     color: white;
