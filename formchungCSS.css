@@ -590,13 +590,19 @@ audio{
     transition: 1s ease-in-out;
 }
 
-#backgroundmusic{
-    
-    width: 100%;
-    padding:0 30% 0 30% ;
-    margin-top: 200px;
 
-    
+#backgroundmusicicon{
+     position: fixed;
+    bottom: 40px;
+    left: 40px;
+    z-index: 80;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color:#5E9431 ;
+    color: white;
+
 }
 
 

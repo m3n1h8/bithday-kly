@@ -108,6 +108,8 @@ function scrolltogift(){
         start: "block",
     });
     backgroundmusic.play();
+    backgroundmusicicon.name="volume-high-outline";
+    backgroundmusicicon.onclick= offmusic
 }
 
 //
@@ -140,6 +142,7 @@ document.getElementById("cake").addEventListener("click", function () {
     const summary3 = document.querySelector(".summary3");
     const summary4 = document.querySelector(".summary4");
     const loichucbox = document.querySelector(".loichucbox");
+    const manh = document.querySelector(".manh");
     function showloichuckly(){
          
          loichucbox.style.zIndex="109";
@@ -150,6 +153,9 @@ document.getElementById("cake").addEventListener("click", function () {
          layoutcontainer.style.opacity="1";
          videobox.style.display="none"; 
          layoutcontainer.addEventListener("click",hide);
+         backgroundmusic.pause();
+         manh.play();
+
     }
     
     summary1.addEventListener("click",showloichuckly);
@@ -164,6 +170,8 @@ function hide(){
     layoutcontainer.removeEventListener("click",hide); 
     video.pause();
     backgroundmusic.play();
+    backgroundmusicicon.name="volume-high-outline";
+    backgroundmusicicon.onclick= offmusic
 }
 //
 // chiếu video anh da đen 
@@ -180,6 +188,42 @@ function watchvideo(){
    
     setTimeout(()=>{video.play()}, 1500);
     
-    backgroundmusic.pause();// sai rồi sửa sau
+    backgroundmusic.pause();
     AOS.refresh(); 
 }
+//
+//
+
+  const bgMusic = document.getElementById("bg-music");
+  const voiceAudios = document.querySelectorAll(".voice-msg");
+
+  voiceAudios.forEach(audio => {
+    audio.addEventListener("play", () => {
+      if (!bgMusic.paused) {
+        bgMusic.pause();
+      }
+    });
+
+    // Nếu muốn tự bật lại nhạc nền sau khi nghe xong:
+    // audio.addEventListener("ended", () => {
+    //   bgMusic.play();
+    // });
+  });
+
+
+  //
+  // tắt bật nhạc nền
+   const backgroundmusicicon = document.getElementById
+   ("backgroundmusicicon")
+   const offmusic =()=>{
+    backgroundmusicicon.name="volume-mute-outline";
+    backgroundmusic.pause();
+    backgroundmusicicon.onclick= onmusic
+   }
+   const onmusic= () =>{
+    backgroundmusicicon.name="volume-high-outline";
+    backgroundmusic.play();
+    backgroundmusicicon.onclick= offmusic
+
+   }
+   backgroundmusicicon.onclick= offmusic
