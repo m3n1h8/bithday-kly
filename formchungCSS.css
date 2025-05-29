@@ -133,6 +133,7 @@ header img{
         margin-top: 300px;
         font-size: 39px;
         font-weight: 600;
+        color: #613f20;
         
        
     }
@@ -193,6 +194,7 @@ header img{
         text-align: center;
         font-size: 30px;
         font-weight: 600;
+        color:#613f20;
         margin-top: 70px;
         margin-bottom: 4%;
         text-shadow: #4d290a 5px 5px 17px 2px;
@@ -267,15 +269,21 @@ header img{
     justify-content: center;
     
 }
-h2{
+ h2{
     text-align: center;
     margin: 10px;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 600;
+}
+#inneriteminterest h2{
+    text-align: center;
+    margin: 10px;
+    font-size: 40px;
     font-weight: 600;
 }
 #inneriteminterest p{
-    font-size: 20px;
-    margin: 10px;
+    font-size: 30px;
+    margin: 40px;
 }
 /* phần đông hồ đếm ngược*/
 
@@ -283,6 +291,7 @@ h2{
         text-align: center;
         margin-top: 190px;
         font-size: 30px;
+        color:#613f20;
         font-family: 'lobster', cursive;
         font-weight: 600;
         text-shadow: #4d290a 5px 5px 17px 2px;
@@ -493,9 +502,10 @@ h2{
 }
 .giftbox p{
     text-align: center;
+
     font-size: 30px;
     font-weight: 600;
-    color: #412105;
+    color:#613f20;
     
 }
 .giftbox .gift{
@@ -531,7 +541,7 @@ h2{
 /*phần lời chúc của mọi người*/
 .loichucbox{
     margin-top: 300px;
-    border: solid 1px #ae7b38;
+    
     
     display: flex;
     flex-direction: column;
@@ -542,7 +552,7 @@ h2{
     font-size: 50px;
     font-weight: 600;
     color:#613f20;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     
 }
 .loichuc{
@@ -578,6 +588,15 @@ audio{
     align-items: center;
     transform: scale(1.1);
     transition: 1s ease-in-out;
+}
+
+#backgroundmusic{
+    
+    width: 100%;
+    padding:0 30% 0 30% ;
+    margin-top: 200px;
+
+    
 }
 
 

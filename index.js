@@ -95,23 +95,6 @@ cake.addEventListener("click", burnfire);
 
 
 
-//
-// chiếu video anh da đen 
-
- const layoutcontainer= document.querySelector(".layoutcontainer");
- const videobox= document.querySelector(".videobox");
- const video= document.querySelector("video");
- const audio= document.querySelector("audio");//đoạn này sai r sửa sau
-function watchvideo(){
-    layoutcontainer.style.display="flex";
-    layoutcontainer.style.opacity="1";
-    
-   
-    setTimeout(()=>{video.play()}, 1500);
-    
-    audio.pause();// sai rồi sửa sau
-    AOS.refresh(); 
-}
 
 
 
@@ -124,6 +107,7 @@ function scrolltogift(){
         behavior: "smooth",
         start: "block",
     });
+    backgroundmusic.play();
 }
 
 //
@@ -151,27 +135,51 @@ document.getElementById("cake").addEventListener("click", function () {
     // nổi phần lời chúc
     const details = document.querySelector("detail");
     const loichuc = document.querySelector(".loichuc");
-    const summary = document.querySelector("summary");
+    const summary1 = document.querySelector(".summary1");
+    const summary2 = document.querySelector(".summary2");
+    const summary3 = document.querySelector(".summary3");
+    const summary4 = document.querySelector(".summary4");
     const loichucbox = document.querySelector(".loichucbox");
     function showloichuckly(){
+         
+         loichucbox.style.zIndex="109";
          loichucbox.setAttribute("class","loichucshowing");
-            loichucbox.style.zIndex="109";
- 
+            
+         layoutcontainer.style.zIndex="99";
          layoutcontainer.style.display="flex";
          layoutcontainer.style.opacity="1";
          videobox.style.display="none"; 
          layoutcontainer.addEventListener("click",hide);
     }
     
-    summary.addEventListener("click",showloichuckly);
-    
+    summary1.addEventListener("click",showloichuckly);
+    summary2.addEventListener("click",showloichuckly);
+    summary3.addEventListener("click",showloichuckly);
+    summary4.addEventListener("click",showloichuckly);
 //
 // ẩn video 
 function hide(){
     layoutcontainer.style.display="none";
-    videobox.style.display="flex"; 
+    
     layoutcontainer.removeEventListener("click",hide); 
-    loichucbox.style.zIndex="30";
     video.pause();
-    audio.play();
+    backgroundmusic.play();
+}
+//
+// chiếu video anh da đen 
+
+ const layoutcontainer= document.querySelector(".layoutcontainer");
+ const videobox= document.querySelector(".videobox");
+ const video= document.querySelector("video");
+ const backgroundmusic= document.querySelector("#backgroundmusic");
+function watchvideo(){
+    layoutcontainer.style.display="flex";
+    layoutcontainer.style.zIndex="110";
+  
+    videobox.style.display="flex"; 
+   
+    setTimeout(()=>{video.play()}, 1500);
+    
+    backgroundmusic.pause();// sai rồi sửa sau
+    AOS.refresh(); 
 }
